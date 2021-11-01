@@ -21,8 +21,10 @@ export default class TodoInput extends Component {
                    
                  </div>
                  <div className="d-grid">
-                 <button type="submit" className="btn btn-outline-secondary mt-3">
-                     Add item
+                 <button type="submit" 
+                 disabled={item? false : true}
+                 className={editItem ? "btn btn-outline-success mt-3" : "btn btn-outline-secondary mt-3 uppercase"}>
+                     {editItem ? 'Edit Item' : 'Add item'}
                  </button>
                  </div>
                
